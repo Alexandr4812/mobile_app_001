@@ -1,0 +1,155 @@
+<Main>:
+    name: 'main'
+    textinputH: textinputH
+    label: label
+    textinputS: textinputS
+
+    BoxLayout:
+        padding: 1, 1
+        orientation: 'vertical'
+
+        Label:
+            text:
+            halign: 'auto'
+            size_hint: (1,0.1)
+            background_color: (125/255, 125/255, 125/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: 'Необходимое количество'
+            bold: True
+            font_size: 26
+            color: (0/255,128/255,0/255,1)
+            outline_color: 'black'
+            outline_width: 1
+            background_color: (169/255, 169/255, 169/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+        Label:
+            text: 'секций:'
+            bold: True
+            font_size: 26
+            color: (0/255,128/255,0/255,1)
+            outline_color: 'black'
+            outline_width: 1
+            background_color: (169/255, 169/255, 169/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            id: label
+            color: 'black'
+            size_hint: (0.2,1)
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+            background_color: (152/255, 251/255, 152/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+
+        Label:
+            text:
+            halign: 'auto'
+            size_hint: (1,0.1)
+            background_color: (125/255, 125/255, 125/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: 'ВВЕДИТЕ ВЫСОТУ ПОТОЛКОВ:'
+            color: 'red'
+            bold: True
+            background_color: (169/255, 169/255, 169/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: textinputH
+            multiline: False
+            halign: 'center'
+            size_hint: (0.2,1)
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        Label:
+            text: 'ВВЕДИТЕ ПЛОЩАДЬ ПОМЕЩЕНИЯ:'
+            color: 'red'
+            bold: True
+            halign: 'auto'
+            background_color: (169/255, 169/255, 169/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        TextInput:
+            id: textinputS
+            multiline: False
+            halign: 'center'
+            size_hint: (0.2,1)
+            pos_hint: {'center_x':0.5, 'center_y':0.5}
+
+        Label:
+            text:
+            halign: 'auto'
+            size_hint: (1,0.1)
+            background_color: (125/255, 125/255, 125/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Label:
+            text: 'ВЫБЕРЕТЕ ТИП РАДИАТОРА:'
+            color: 'red'
+            bold: True
+            background_color: (169/255, 169/255, 169/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+        Button:
+            text: 'АЛЛЮМИНИЕВЫЙ 500мм'
+            on_press: root.writeAll_500(self)
+
+        Button:
+            text: 'АЛЛЮМИНИЕВЫЙ 350мм'
+            on_press: root.writeAll_350(self)
+
+        Button:
+            text: 'БИМЕТАЛИЧЕСКИЙ 500мм'
+            on_press: root.writeBI_500(self)
+
+        Button:
+            text: 'БИМЕТАЛИЧЕСКИЙ 350мм'
+            on_press: root.writeBI_350(self)
